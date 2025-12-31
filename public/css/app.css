@@ -1,0 +1,239 @@
+/* =========================
+   Dashboard Modern UI
+   ========================= */
+
+:root{
+  --dash-radius: 18px;
+  --dash-shadow: 0 10px 30px rgba(0,0,0,.08);
+  --dash-border: 1px solid rgba(0,0,0,.08);
+}
+
+.dash-hero{
+  border-radius: calc(var(--dash-radius) + 6px);
+  padding: 22px;
+  color: #fff;
+  background: radial-gradient(1200px 400px at 10% 20%, rgba(255,255,255,.25), rgba(255,255,255,0) 60%),
+              linear-gradient(135deg, #111827, #1f2937 55%, #0b1220);
+  box-shadow: var(--dash-shadow);
+}
+
+.dash-hero__content{
+  display:flex;
+  gap:16px;
+  align-items:flex-start;
+  justify-content:space-between;
+}
+
+.dash-kicker{
+  font-size: 12px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  opacity: .85;
+}
+
+.dash-title{
+  font-weight: 800;
+  letter-spacing: -.02em;
+}
+
+.dash-subtitle{
+  opacity: .9;
+  max-width: 56ch;
+}
+
+.dash-hero__right{
+  text-align:right;
+  min-width: 180px;
+}
+
+.dash-chip{
+  display:inline-block;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.14);
+  border: 1px solid rgba(255,255,255,.18);
+  backdrop-filter: blur(8px);
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.dash-date{
+  margin-top: 6px;
+  opacity: .9;
+  font-size: 13px;
+}
+
+/* KPI Card */
+.dash-card{
+  display:block;
+  text-decoration:none;
+  color: inherit;
+  border-radius: var(--dash-radius);
+  border: var(--dash-border);
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(0,0,0,.06);
+  padding: 16px;
+  height: 100%;
+}
+
+.dash-card--click:hover{
+  transform: translateY(-2px);
+  transition: transform .18s ease, box-shadow .18s ease;
+  box-shadow: 0 14px 35px rgba(0,0,0,.10);
+}
+
+.dash-card__top{
+  display:flex;
+  align-items:center;
+  gap: 12px;
+}
+
+.dash-icon{
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight: 800;
+  background: #111827;
+  color:#fff;
+}
+
+.dash-label{
+  font-size: 13px;
+  color: rgba(0,0,0,.55);
+}
+
+.dash-value{
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -.02em;
+}
+
+.dash-card__bottom{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px dashed rgba(0,0,0,.12);
+  color: rgba(0,0,0,.72);
+  font-weight: 600;
+}
+
+.dash-arrow{
+  font-weight: 900;
+}
+
+/* Panel */
+.dash-panel{
+  border-radius: var(--dash-radius);
+  border: var(--dash-border);
+  background:#fff;
+  box-shadow: 0 6px 18px rgba(0,0,0,.06);
+  padding: 16px;
+  height: 100%;
+}
+
+.dash-panel__head{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.dash-h2{
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: -.01em;
+}
+
+.dash-muted{
+  font-size: 13px;
+  color: rgba(0,0,0,.6);
+}
+
+/* Quick action */
+.dash-action{
+  display:flex;
+  align-items:center;
+  gap: 12px;
+  padding: 12px 12px;
+  border-radius: 16px;
+  border: 1px solid rgba(0,0,0,.08);
+  background: #fff;
+  text-decoration:none;
+  color: inherit;
+}
+
+.dash-action:hover{
+  box-shadow: 0 12px 26px rgba(0,0,0,.10);
+  transform: translateY(-1px);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.dash-action__icon{
+  width: 38px;
+  height: 38px;
+  border-radius: 14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: rgba(17,24,39,.08);
+  font-weight: 900;
+}
+
+.dash-action__title{
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.dash-action__sub{
+  font-size: 12px;
+  color: rgba(0,0,0,.6);
+}
+
+.dash-action__text{
+  flex: 1;
+}
+
+/* Tip */
+.dash-tip{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 12px;
+  padding: 12px 12px;
+  border-radius: 16px;
+  background: rgba(17,24,39,.04);
+  border: 1px dashed rgba(0,0,0,.18);
+}
+
+.dash-tip__left{
+  display:flex;
+  align-items:flex-start;
+  gap: 10px;
+}
+
+.dash-tip__badge{
+  font-size: 12px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #111827;
+  color:#fff;
+}
+
+/* Mobile polish */
+@media (max-width: 576px){
+  .dash-hero__content{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .dash-hero__right{
+    text-align:left;
+    min-width: unset;
+  }
+}
